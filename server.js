@@ -14,11 +14,15 @@ app.post("/scrape-entries", async (req, res) => {
 
   for (const url of links) {
     try {
-      const { data } = await axios.get(url, {
-        headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)", 
-          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", 
-          "Accept-Language": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7" }
-      });
+const { data } = await axios.get(url, {
+  headers: {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Referer": "https://eksisozluk.com/"
+  }
+});
+
       const $ = cheerio.load(data);
 
       const titleHtml = $("#title").prop("outerHTML") || "";
