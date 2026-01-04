@@ -4,7 +4,7 @@ const fs = require("fs");
 
 async function scrape() {
   try {
-    const url = "https://eksisozluk.com/debe";
+    const url = "hhttps://eksisozluk.com/debe";
     const { data } = await axios.get(url, {
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
