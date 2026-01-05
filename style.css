@@ -18,3 +18,14 @@ img.avatar {
   object-fit: cover; /* resim orantılı şekilde kırpılır */
   border-radius: 50%; /* istersen yuvarlak avatar görünümü */
 }
+a.url {
+  color: rgb(52, 255, 1);
+}
+
+a.url:visited {
+  color: rgb(0, 255, 213);
+}
+a.url:hover {
+  color: rgb(255, 0, 234);
+}
+

@@ -47,166 +47,102 @@ const { data } = await axios.get(url, {
 
 <script>
 ${/* senin verdiğin kodu buraya yapıştırıyoruz */""}
-var punto = 57;
-var scrl = 2;
-var artis = 1;
-var ilk_bas = false;
-var ilk_bas_tekrari = 3;
-var hiz = 0;
-var yon = 0;
-var dongu = null;
+    var punto = 57;
+    var scrl = 2;
+    var artis = 3;
+    var ilk_bas = false;
+    var ilk_bas_tekrari = 12;
+    var hiz = 0;
+    var yon = 0;
+    var dongu = null;
 
-var boyut = sessionStorage.getItem("boyut") ? parseInt(sessionStorage.getItem("boyut")) : punto;
-var metinAlanlari = document.querySelectorAll(".content");
-var style = document.createElement('style');
-style.innerHTML = \`
-    #kutu {
-        position: fixed;
-        top: 150px;
-        left: 1250px;
-        transform: translateY(-50%);
-        background: rgba(40, 40, 40, 0.9);
-        color: white;
-        padding: 10px;
-        border-radius: 10px;
-        z-index: 9999;
-        font-family: 'Sitka Text', serif;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        border: 1px solid #444;
-        width: 70px;
+    var boyut = sessionStorage.getItem("boyut") ? parseInt(sessionStorage.getItem("boyut")) : punto;
+    
+    // Stil Enjeksiyonu
+    var style = document.createElement('style');
+    style.innerHTML = \`
+        #kutu { position: fixed; top: 150px; right: 20px; background: rgba(40, 40, 40, 0.9); color: white; padding: 10px; border-radius: 10px; z-index: 9999; font-family: sans-serif; text-align: center; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 1px solid #444; width: 80px; }
+        #kutu button { cursor: pointer; padding: 8px 0; border-radius: 4px; border: none; background: #555; color: white; font-weight: bold; }
+        #kutu button:hover { background: #17FF00; color: black; }
+        #kutuheader { font-size: 12px; color: #17FF00; margin-bottom: 5px; }
+    \`;
+    document.head.appendChild(style);
+
+    var btn = document.createElement("div");
+    btn.id = "kutu";
+    var header = document.createElement("div");
+    header.id = "kutuheader";
+    header.innerHTML = "%0<br>0:00<br>hız:0";
+
+    function createBtn(txt, id, func) {
+        let b = document.createElement("button");
+        b.innerHTML = txt;
+        b.id = id;
+        b.onclick = func;
+        return b;
     }
-    #kutu button { 
-        cursor: pointer; 
-        padding: 8px 0;
-        border-radius: 4px;
-        border: none;
-        background: #555;
-        color: white;
-        font-weight: bold;
-        transition: 0.2s;
+
+    btn.appendChild(header);
+    btn.appendChild(createBtn("+1", "up", yukari));
+    btn.appendChild(createBtn("-1", "down", asagi));
+    btn.appendChild(createBtn("DUR", "dur", dur));
+    btn.appendChild(createBtn("<<", "sizedown", sizedown));
+    btn.appendChild(createBtn(">>", "sizeup", sizeup));
+    btn.appendChild(createBtn("KYDT", "save", save));
+    document.body.appendChild(btn);
+
+    function metinleriGuncelle() {
+        document.querySelectorAll(".content").forEach(el => {
+            el.style.fontSize = boyut + "px";
+        });
     }
-    #kutu button:hover { background: #333333ff; }
-    #kutu #dur { background: #3b3b3bff; }
-    #kutu #save { background: #3d3d3dff; }
-    #kutuheader { 
-        font-size: 13px; 
-        line-height: 1.4;
-        color: #17FF00; 
-        margin-bottom: 5px;
-        word-wrap: break-word;
+
+    function yukari() { yon -= scrl; hiz--; durdur(); git(); }
+    function asagi() { 
+        if (!ilk_bas) { yon += (scrl * ilk_bas_tekrari); hiz = ilk_bas_tekrari; } 
+        else { yon += scrl; hiz++; }
+        ilk_bas = true; durdur(); git(); 
     }
-\`;
-document.head.appendChild(style);
+    function durdur() { clearInterval(dongu); }
+    function dur() { ilk_bas = false;    if (hiz != 0) {ilk_bas_tekrari = hiz;} yon = 0; hiz = 0; durdur(); }
 
-var btn = document.createElement("div");
-btn.id = "kutu";
-
-var header = document.createElement("div");
-header.id = "kutuheader";
-header.innerHTML = "%0<br>0:00<br>hız:0";
-
-function createBtn(txt, id, func) {
-    let b = document.createElement("button");
-    b.innerHTML = txt;
-    b.id = id;
-    b.onclick = func;
-    return b;
-}
-
-btn.appendChild(header);
-btn.appendChild(createBtn("+1", "up", yukari));
-btn.appendChild(createBtn("-1", "down", asagi));
-btn.appendChild(createBtn("DUR", "dur", dur));
-btn.appendChild(createBtn("<<", "sizedown", sizedown));
-btn.appendChild(createBtn(">>", "sizeup", sizeup));
-btn.appendChild(createBtn("KYDT", "save", save));
-
-document.body.appendChild(btn);
-
-const demoArea = document.getElementById("demo");
-if(demoArea) demoArea.style.fontSize = boyut + "px";
-
-
-function yukari() {
-    yon = yon - scrl;
-    hiz--;
-    try {
-        clearInterval(dongu);
-    } catch {
-        alert("döngü kırılamadı")
-    }
-    git();
-}
-function asagi() {
-    if (ilk_bas == true) {
-        yon = yon + scrl;
-        hiz++;
-    } else {
-        for (var i = 0; i < ilk_bas_tekrari; i++)
-            yon = yon + scrl;
-        hiz = ilk_bas_tekrari;
-    }
-    ilk_bas = true;
-    try {
-        clearInterval(dongu);
-    } catch {
-        alert("döngü kırılamadı")
-    }
-    git();
-}
-function dur() {
-    ilk_bas = false;
-    if (hiz != 0) {
-        ilk_bas_tekrari = hiz;
-    }
-    yon = 0;
-    hiz = 0;
-}
 function git() {
-    if (yon == 0) {
-        return;
-    } else {
-        var intervlhiz = 480 / Math.abs(yon);
-        dongu = setInterval(scrollWin, intervlhiz);
-        function scrollWin() {
-            miktar = Math.round((document.body.scrollTop / (document.body.scrollHeight - window.innerHeight)) * 100);
+    if (yon === 0) return;
+    var intervlhiz = 480 / Math.abs(yon);
+    dongu = setInterval(() => {
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        var currentScroll = window.scrollY;
+        var miktar = Math.round((currentScroll / maxScroll) * 100);
 
-            kalan_sure = (((document.body.scrollHeight - window.innerHeight) - document.body.scrollTop) / 1) * ((intervlhiz) / 540);
-            dakika = Math.floor(Math.round(kalan_sure) / 60);
-            saniye = Math.round(kalan_sure) - dakika * 60;
-            if (saniye < 10) {
-                header.innerHTML = "%" + miktar + "<br>" + dakika + ":0" + saniye + "<br>hız:" + hiz;
-            } else {
-                header.innerHTML = "%" + miktar + "<br>" + dakika + ":" + saniye + "<br>hız:" + hiz;
-            }
-            window.scrollTo(0, window.scrollY + 1 * Math.sign(yon));
-        }
-    }
-}
-metinAlanlari.forEach(function(el) {
-    el.style.fontSize = boyut + "px";
-});
+        // kalan mesafe
+        var kalanMesafe = maxScroll - currentScroll;
 
-function sizedown() {
-    boyut -= artis;
-    // Liste içerisindeki her bir elementi tek tek gez ve puntosunu değiştir
-    metinAlanlari.forEach(function(el) {
-        el.style.fontSize = boyut + "px";
-    });
+        // hız: her intervalde kaç px kaydırıyorsun
+        var pxPerStep = Math.sign(yon); 
+        var stepsNeeded = kalanMesafe / Math.abs(pxPerStep);
+
+        // kalan süre (ms cinsinden)
+        var kalanSureMs = stepsNeeded * intervlhiz;
+
+        // dakika ve saniye
+        var dakika = Math.floor(kalanSureMs / 60000);
+        var saniye = Math.floor((kalanSureMs % 60000) / 1000);
+
+        header.innerHTML = "%" + miktar + "<br>" +
+            dakika + ":" + (saniye < 10 ? "0" + saniye : saniye) +
+            "<br>hız:" + hiz;
+
+        window.scrollBy(0, pxPerStep);
+    }, intervlhiz);
 }
 
-function sizeup() {
-    boyut += artis;
-    // Liste içerisindeki her bir elementi tek tek gez ve puntosunu değiştir
-    metinAlanlari.forEach(function(el) {
-        el.style.fontSize = boyut + "px";
-    });
-}
-function save() { sessionStorage.setItem("boyut", boyut); alert("Ayarlar Kaydedildi!"); }
+
+    function sizedown() { boyut -= artis; metinleriGuncelle(); }
+    function sizeup() { boyut += artis; metinleriGuncelle(); }
+    function save() { sessionStorage.setItem("boyut", boyut); alert("Boyut kaydedildi: " + boyut); }
+
+    // Başlangıç ayarı
+    metinleriGuncelle();
 </script>
 `;
 
