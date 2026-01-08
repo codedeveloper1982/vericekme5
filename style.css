@@ -1,30 +1,26 @@
 /* 🔹 Başlıkları ortala ve puntoyu büyüt */
-h1#title {
-  text-align: center;
-  font-size: 2.5em; /* biraz daha büyük punto */
-  margin-top: 20px;
-  margin-bottom: 20px;
+            body { background: #111; color: #ccc; font-family: 'Sitka Text', serif; padding: 50px; line-height: 1.6; }
+            section { margin-bottom: 50px; border-bottom: 1px dashed #444; padding-bottom: 20px; }
+            h1#title { color: #17FF00; font-size: 24px; }
+            .content { margin-top: 10px; display: block; }
+            .entry-author { color: #555; font-size: 0.8em; text-align: right; }
+            hr { border: 0; border-top: 1px solid #333; margin: 40px 0; }
+.entry-footer {
+    border-top: 1px dotted #333;
+    padding-top: 5px;
+}
+.entry-footer a {
+    color: #17FF00 !important; /* Yazar isimleri yeşil görünsün */
+    text-decoration: none;
 }
 
-/* 🔹 .content class'ına sahip tüm elementlerin margin değeri */
-.content {
-  margin: 120px;
-}
-
-/* 🔹 Avatar resimlerinin boyutunu sabitle */
-img.avatar {
-  width: 100px;
-  height: 100px;
-  object-fit: cover; /* resim orantılı şekilde kırpılır */
-  border-radius: 50%; /* istersen yuvarlak avatar görünümü */
-}
 a.url {
-  color: rgb(52, 255, 1);
+  color: red;
 }
 a.url:visited {
   color: rgb(0, 255, 213);
 }
-a.url:hover {
-  color: rgb(255, 0, 234);
-}
 
+a.url:hover {
+  color: yellow;
+}
