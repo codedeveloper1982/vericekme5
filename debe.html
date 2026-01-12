@@ -3,464 +3,507 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>DEBE</title>
-  <link rel="stylesheet" href="style.css">
+  <title>DEBE - Seçim Paneli</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    ol li { margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+    input[type="checkbox"] { transform: scale(1.2); margin-left: 10px; cursor: pointer; }
+    button { padding: 10px 20px; cursor: pointer; background: #008000; color: white; border: none; border-radius: 4px; }
+    #openEntry { background: #555; }
+  </style>
 </head>
 <body>
-  <h2>Partial Index Listesi</h2>
+  <h2>Ekşi Sözlük DEBE Listesi</h2>
   
-  <ol>
+    <div id="bulk-selectors" style="margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+      <strong>Toplu Seçim:</strong><br>
+      <label><input type="checkbox" id="group1"> 1-11 Arası Seç</label> | 
+      <label><input type="checkbox" id="group2"> 12-22 Arası Seç</label> | 
+      <label><input type="checkbox" id="group3"> 23-33 Arası Seç</label> | 
+      <label><input type="checkbox" id="group4"> 33+ Sonrasını Seç</label>
+    </div>
+    
+  <ol id='entry-list'>
         <li>
           
-      <a href="/entry/181029910?debe=true">
-        <span class="caption">8 ocak 2026 iran protestoları</span>
+      <a href="/entry/181057994?debe=true">
+        <span class="caption">ekşi itiraf</span>
       </a>
     
-          <input type="checkbox" name="check-0" />
+          <input type="checkbox" class="entry-check" data-index="0" name="check-0" />
         </li>
       
         <li>
           
-      <a href="/entry/181039791?debe=true">
-        <span class="caption">amisexist.com</span>
-      </a>
-    
-          <input type="checkbox" name="check-1" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181049904?debe=true">
-        <span class="caption">fenerbahçe</span>
-      </a>
-    
-          <input type="checkbox" name="check-2" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181038212?debe=true">
-        <span class="caption">chatgpt'nin kullanıcıya sürekli övgüler yağdırması</span>
-      </a>
-    
-          <input type="checkbox" name="check-3" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181033095?debe=true">
-        <span class="caption">beşiktaş</span>
-      </a>
-    
-          <input type="checkbox" name="check-4" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181036738?debe=true">
-        <span class="caption">pestisit krizi</span>
-      </a>
-    
-          <input type="checkbox" name="check-5" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181035485?debe=true">
-        <span class="caption">kim jong-un oğlu olduğunu iddia eden türk</span>
-      </a>
-    
-          <input type="checkbox" name="check-6" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181031415?debe=true">
-        <span class="caption">ilkokul kantininde satılan unutulamayan lezzetler</span>
-      </a>
-    
-          <input type="checkbox" name="check-7" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181039474?debe=true">
-        <span class="caption">sevgilinin karşı cins yakın arkadaşı</span>
-      </a>
-    
-          <input type="checkbox" name="check-8" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181038787?debe=true">
-        <span class="caption">galatasaray</span>
-      </a>
-    
-          <input type="checkbox" name="check-9" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181049851?debe=true">
-        <span class="caption">matteo guendouzi</span>
-      </a>
-    
-          <input type="checkbox" name="check-10" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181033281?debe=true">
-        <span class="caption">ibn-i haldun</span>
-      </a>
-    
-          <input type="checkbox" name="check-11" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181031377?debe=true">
-        <span class="caption">pleb</span>
-      </a>
-    
-          <input type="checkbox" name="check-12" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181043189?debe=true">
-        <span class="caption">dışavurumcu alman sineması</span>
-      </a>
-    
-          <input type="checkbox" name="check-13" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181042378?debe=true">
-        <span class="caption">the x-files</span>
-      </a>
-    
-          <input type="checkbox" name="check-14" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181030713?debe=true">
-        <span class="caption">şarap</span>
-      </a>
-    
-          <input type="checkbox" name="check-15" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181034303?debe=true">
-        <span class="caption">whatsapp'tan önce sevgililerin iletişimi</span>
-      </a>
-    
-          <input type="checkbox" name="check-16" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181040331?debe=true">
-        <span class="caption">prenses erkekler lütfen bana gelmesin</span>
-      </a>
-    
-          <input type="checkbox" name="check-17" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181037987?debe=true">
-        <span class="caption">dikiştutmaz sabri</span>
-      </a>
-    
-          <input type="checkbox" name="check-18" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181040925?debe=true">
-        <span class="caption">evlenme vaadiyle 770 bin tl dolandırılan öğretmen</span>
-      </a>
-    
-          <input type="checkbox" name="check-19" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181034851?debe=true">
-        <span class="caption">şu an okunan kitaptan bir cümle</span>
-      </a>
-    
-          <input type="checkbox" name="check-20" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181052797?debe=true">
-        <span class="caption">okan buruk</span>
-      </a>
-    
-          <input type="checkbox" name="check-21" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181042110?debe=true">
-        <span class="caption">notebooklm</span>
-      </a>
-    
-          <input type="checkbox" name="check-22" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181047249?debe=true">
-        <span class="caption">eyes wide shut</span>
-      </a>
-    
-          <input type="checkbox" name="check-23" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181029998?debe=true">
-        <span class="caption">yüzüklerin efendisi</span>
-      </a>
-    
-          <input type="checkbox" name="check-24" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181039669?debe=true">
-        <span class="caption">türkiye</span>
-      </a>
-    
-          <input type="checkbox" name="check-25" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181030939?debe=true">
-        <span class="caption">bebek otel</span>
-      </a>
-    
-          <input type="checkbox" name="check-26" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181052402?debe=true">
-        <span class="caption">google</span>
-      </a>
-    
-          <input type="checkbox" name="check-27" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181033674?debe=true">
-        <span class="caption">7 ocak 2026 gümrüksüz yurtdışı alışverişin bitmesi</span>
-      </a>
-    
-          <input type="checkbox" name="check-28" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181041122?debe=true">
-        <span class="caption">kadınların erkeklere hiç şiir yazmaması</span>
-      </a>
-    
-          <input type="checkbox" name="check-29" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181038993?debe=true">
-        <span class="caption">film tavsiyeleri</span>
-      </a>
-    
-          <input type="checkbox" name="check-30" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181036122?debe=true">
-        <span class="caption">ibrahim tatlıses'in öğrettiği en önemli şey</span>
-      </a>
-    
-          <input type="checkbox" name="check-31" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181053000?debe=true">
-        <span class="caption">10 ocak 2026 iran'ın eylemcilere idam açıklaması</span>
-      </a>
-    
-          <input type="checkbox" name="check-32" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181030169?debe=true">
-        <span class="caption">melis işiten</span>
-      </a>
-    
-          <input type="checkbox" name="check-33" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181049170?debe=true">
-        <span class="caption">10 ocak 2026 galatasaray fenerbahçe maçı</span>
-      </a>
-    
-          <input type="checkbox" name="check-34" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181036201?debe=true">
-        <span class="caption">mabel matiz</span>
-      </a>
-    
-          <input type="checkbox" name="check-35" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181037625?debe=true">
-        <span class="caption">yemek siparişi verirken yapılan hesaplama</span>
-      </a>
-    
-          <input type="checkbox" name="check-36" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181030446?debe=true">
-        <span class="caption">türk halkının en büyük ortak zevki</span>
-      </a>
-    
-          <input type="checkbox" name="check-37" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181032340?debe=true">
-        <span class="caption">bu saatte hala uyumama sebebi</span>
-      </a>
-    
-          <input type="checkbox" name="check-38" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181049605?debe=true">
-        <span class="caption">domenico tedesco</span>
-      </a>
-    
-          <input type="checkbox" name="check-39" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181035572?debe=true">
-        <span class="caption">izmir</span>
-      </a>
-    
-          <input type="checkbox" name="check-40" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181032801?debe=true">
-        <span class="caption">sözlük yazarlarının şiirleri</span>
-      </a>
-    
-          <input type="checkbox" name="check-41" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181030856?debe=true">
-        <span class="caption">ismail şenol</span>
-      </a>
-    
-          <input type="checkbox" name="check-42" />
-        </li>
-      
-        <li>
-          
-      <a href="/entry/181049890?debe=true">
+      <a href="/entry/181059463?debe=true">
         <span class="caption">levent mercan</span>
       </a>
     
-          <input type="checkbox" name="check-43" />
+          <input type="checkbox" class="entry-check" data-index="1" name="check-1" />
         </li>
       
         <li>
           
-      <a href="/entry/181034949?debe=true">
-        <span class="caption">karamanoğulları</span>
+      <a href="/entry/181066763?debe=true">
+        <span class="caption">rusya ukrayna savaşı</span>
       </a>
     
-          <input type="checkbox" name="check-44" />
+          <input type="checkbox" class="entry-check" data-index="2" name="check-2" />
         </li>
       
         <li>
           
-      <a href="/entry/181036111?debe=true">
-        <span class="caption">şekib avdagiç</span>
+      <a href="/entry/181065582?debe=true">
+        <span class="caption">ederson santana de moraes</span>
       </a>
     
-          <input type="checkbox" name="check-45" />
+          <input type="checkbox" class="entry-check" data-index="3" name="check-3" />
         </li>
       
         <li>
           
-      <a href="/entry/181044144?debe=true">
-        <span class="caption">aşk-ı memnu</span>
+      <a href="/entry/181057365?debe=true">
+        <span class="caption">sevgilinin yalnız kalmak istemesi</span>
       </a>
     
-          <input type="checkbox" name="check-46" />
+          <input type="checkbox" class="entry-check" data-index="4" name="check-4" />
         </li>
       
         <li>
           
-      <a href="/entry/181040300?debe=true">
-        <span class="caption">kürk mantolu madonna</span>
+      <a href="/entry/181058095?debe=true">
+        <span class="caption">sosyalizm</span>
       </a>
     
-          <input type="checkbox" name="check-47" />
+          <input type="checkbox" class="entry-check" data-index="5" name="check-5" />
         </li>
       
         <li>
           
-      <a href="/entry/181036364?debe=true">
+      <a href="/entry/181076143?debe=true">
+        <span class="caption">yazarları 8 yaşına götüren görsel</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="6" name="check-6" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181070940?debe=true">
+        <span class="caption">f/p oranı en iyi viski</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="7" name="check-7" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181056866?debe=true">
+        <span class="caption">ekşi günlük</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="8" name="check-8" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181058216?debe=true">
+        <span class="caption">melik yiğitel</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="9" name="check-9" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181070460?debe=true">
+        <span class="caption">iran</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="10" name="check-10" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181074409?debe=true">
+        <span class="caption">köfteci yusuf</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="11" name="check-11" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181062118?debe=true">
+        <span class="caption">mehmet şimşek</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="12" name="check-12" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181067787?debe=true">
+        <span class="caption">ankara</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="13" name="check-13" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181070118?debe=true">
+        <span class="caption">fallout</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="14" name="check-14" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181055884?debe=true">
+        <span class="caption">beşiktaş</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="15" name="check-15" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181066250?debe=true">
+        <span class="caption">diablo iv</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="16" name="check-16" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181059773?debe=true">
+        <span class="caption">9 ocak 2026 mabel matiz duruşması</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="17" name="check-17" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181071586?debe=true">
+        <span class="caption">fransa'nın nato'dan çekilmeyi düşünmesi</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="18" name="check-18" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181062898?debe=true">
+        <span class="caption">sahibinden.com</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="19" name="check-19" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181056999?debe=true">
+        <span class="caption">mutlu eden basit şeyler</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="20" name="check-20" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181055650?debe=true">
+        <span class="caption">ilişkiden hayır gelmeyeceğini gösteren ilk işaret</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="21" name="check-21" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181065025?debe=true">
+        <span class="caption">bir beyoğlu düşü</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="22" name="check-22" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181056977?debe=true">
+        <span class="caption">her yazardan 1 albüm tavsiyesi</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="23" name="check-23" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181059525?debe=true">
+        <span class="caption">7 ocak 2026 gümrüksüz yurtdışı alışverişin bitmesi</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="24" name="check-24" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181063632?debe=true">
+        <span class="caption">trump'ın orduya grönland'ı işgal emri vermesi</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="25" name="check-25" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181063901?debe=true">
+        <span class="caption">tıp okumayın 3 yıl sonra robot doktorlar olacak</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="26" name="check-26" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181064335?debe=true">
+        <span class="caption">kadın düşmanlığının altındaki gizli gerçek</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="27" name="check-27" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181073319?debe=true">
+        <span class="caption">sagopa kajmer</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="28" name="check-28" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181059667?debe=true">
+        <span class="caption">melis işiten</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="29" name="check-29" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181055722?debe=true">
+        <span class="caption">domenico tedesco</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="30" name="check-30" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181061602?debe=true">
+        <span class="caption">10 ocak 2026 galatasaray fenerbahçe maçı</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="31" name="check-31" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181066432?debe=true">
+        <span class="caption">ali koç</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="32" name="check-32" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181062249?debe=true">
+        <span class="caption">performans toplumu</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="33" name="check-33" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181062086?debe=true">
+        <span class="caption">mabel matiz</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="34" name="check-34" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181055433?debe=true">
         <span class="caption">7 ocak 2026 gümrük kararı cimer itiraz kampanyası</span>
       </a>
     
-          <input type="checkbox" name="check-48" />
+          <input type="checkbox" class="entry-check" data-index="35" name="check-35" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181071511?debe=true">
+        <span class="caption">fenerbahçe</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="36" name="check-36" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181074855?debe=true">
+        <span class="caption">megadeth</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="37" name="check-37" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181063429?debe=true">
+        <span class="caption">öğrenildiğinde ufku iki katına çıkaran şeyler</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="38" name="check-38" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181065992?debe=true">
+        <span class="caption">nilgün marmara</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="39" name="check-39" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181061485?debe=true">
+        <span class="caption">dışavurumcu alman sineması</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="40" name="check-40" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181066518?debe=true">
+        <span class="caption">andrey zvyagintsev</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="41" name="check-41" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181061788?debe=true">
+        <span class="caption">kadınların sekse ihtiyaç duymaması</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="42" name="check-42" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181068784?debe=true">
+        <span class="caption">flu tv</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="43" name="check-43" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181068627?debe=true">
+        <span class="caption">almanya</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="44" name="check-44" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181055617?debe=true">
+        <span class="caption">chatgpt'nin kullanıcıya sürekli övgüler yağdırması</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="45" name="check-45" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181061032?debe=true">
+        <span class="caption">8 ocak 2026 iran protestoları</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="46" name="check-46" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181073822?debe=true">
+        <span class="caption">şeyh said neden isyan etti</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="47" name="check-47" />
+        </li>
+      
+        <li>
+          
+      <a href="/entry/181059519?debe=true">
+        <span class="caption">mor salkımlı ev</span>
+      </a>
+    
+          <input type="checkbox" class="entry-check" data-index="48" name="check-48" />
         </li>
       </ol>
+  <hr>
   
 <button id="fetchEntries">Seçilenleri Çek</button>
 <button id="openEntry">Entry Dosyasını Aç</button>
+
 <script>
+// Toplu seçim kutularını dinle
+const groupSelectors = [
+  { id: "group1", start: 0, end: 10 },
+  { id: "group2", start: 11, end: 21 },
+  { id: "group3", start: 22, end: 32 },
+  { id: "group4", start: 33, end: Infinity }
+];
+
+groupSelectors.forEach(group => {
+  document.getElementById(group.id).addEventListener("change", (e) => {
+    const isChecked = e.target.checked;
+    const allChecks = document.querySelectorAll(".entry-check");
+    
+    allChecks.forEach((cb, index) => {
+      if (index >= group.start && index <= group.end) {
+        cb.checked = isChecked;
+      }
+    });
+  });
+});
+
+// Veri çekme butonu
 document.getElementById("fetchEntries").addEventListener("click", async () => {
   const checkedLinks = [];
-  document.querySelectorAll("ol li input[type=checkbox]:checked").forEach(cb => {
+  document.querySelectorAll(".entry-check:checked").forEach(cb => {
     const link = cb.parentElement.querySelector("a").getAttribute("href");
     checkedLinks.push("https://eksisozluk.com" + link);
   });
+
+  if(checkedLinks.length === 0) {
+    alert("Lütfen en az bir başlık seçin!");
+    return;
+  }
 
   const response = await fetch("/scrape-entries", {
     method: "POST",
@@ -468,13 +511,12 @@ document.getElementById("fetchEntries").addEventListener("click", async () => {
     body: JSON.stringify({ links: checkedLinks })
   });
 
-  const result = await response.text();
-  alert("entry.html dosyası güncellendi!");
+  alert("Seçilen " + checkedLinks.length + " adet başlık işleniyor...");
 });
+
 document.getElementById("openEntry").addEventListener("click", () => {
   window.open("entry.html", "_blank");
 });
-
 </script>
 
 </body>

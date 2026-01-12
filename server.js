@@ -25,6 +25,17 @@ const { data } = await axios.get(url, {
 
       const $ = cheerio.load(data);
 
+      // class'ı "url" OLMAYAN tüm 'a' etiketlerini bul
+      $("a:not(.url)").each((i, el) => {
+        const href = $(el).attr("href");
+        // Eğer href varsa ve zaten tam link değilse (başında http yoksa)
+        if (href && !href.startsWith("http")) {
+          $(el).attr("href", "https://eksisozluk.com" + href);
+          // İsteğe bağlı: Linklerin yeni sekmede açılması için
+          $(el).attr("target", "_blank");
+        }
+      });
+
       const titleHtml = $("#title").prop("outerHTML") || "";
       const contentHtml = $("#entry-item-list").prop("outerHTML") || "";
       const oncekisonki = $("#debe-nav").prop("outerHTML") || "";
@@ -47,7 +58,7 @@ const { data } = await axios.get(url, {
 
 <script>
 ${/* senin verdiğin kodu buraya yapıştırıyoruz */""}
-    var punto = 57;
+    var punto = 77;
     var scrl = 2;
     var artis = 3;
     var ilk_bas = false;
@@ -156,6 +167,13 @@ function git() {
 app.listen(3000, () => console.log("Server çalışıyor: http://localhost:3000"),
   console.log("📂 1. Tarayıcıda 'debe.html' dosyasını değil, http://localhost:3000/debe.html adresini açın.")
 );
-//node debe.js
-//node index.js
-//node server.js
+
+/*
+
+
+node debe.js 
+
+node server.js
+
+
+*/
