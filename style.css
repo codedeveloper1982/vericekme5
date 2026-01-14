@@ -1,5 +1,5 @@
 /* 🔹 Başlıkları ortala ve puntoyu büyüt */
-            body { background: #111; color: #ccc; font-family: 'Sitka Text', serif; padding: 50px; line-height: 1.6; }
+            body { background: #000000; color: #ffffff; font-family: 'Sitka Text', serif; padding: 50px; line-height: 1.6; }
             section { margin-bottom: 50px; border-bottom: 1px dashed #444; padding-bottom: 20px; }
             h1#title { color: #17FF00; font-size: 72px; }
             .content { margin-top: 10px; display: block; }

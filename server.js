@@ -58,7 +58,7 @@ const { data } = await axios.get(url, {
 
 <script>
 ${/* senin verdiğin kodu buraya yapıştırıyoruz */""}
-    var punto = 77;
+    var punto = 100;
     var scrl = 2;
     var artis = 3;
     var ilk_bas = false;
