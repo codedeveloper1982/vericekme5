@@ -172,8 +172,11 @@ app.listen(3000, () => console.log("Server çalışıyor: http://localhost:3000"
 
 
 node debe.js 
-
 node server.js
+
+
+
+
 
 
 */
