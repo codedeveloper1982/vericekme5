@@ -120,7 +120,7 @@ app.post("/scrape-entries", async (req, res) => {
   // Kontrol Paneli & Otomatik Kaydırma Scripti
   allHtml += `
 <script>
-    var punto = 60;
+    var punto = 30;
     var scrl = 2;
     var artis = 3;
     var ilk_bas = false;
